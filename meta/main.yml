@@ -1,0 +1,21 @@
+galaxy_info:
+  author: Mathias BOCQUET
+  description: Ansible role to configure locales
+  company: Sekoya.org
+
+  license: GPLv3
+
+  min_ansible_version: 2.4
+
+  platforms:
+  - name: Debian
+    versions:
+    - jessie
+    - stretch
+    - buster
+
+  galaxy_tags:
+    - locales
+    - sysadmin
+
+dependencies: []

@@ -1,0 +1,13 @@
+---
+# defaults file for locales
+
+# Below are examples. these vars should go in group or host vars inventories files.
+
+# locales_to_be_generated. Sets the locales to generate.
+# locales_to_be_generated:
+#   - 'en_US.UTF-8'
+#   - 'fr_FR.UTF-8'
+# locales_default. Sets the default locale to use
+# locales_default: 'en_US.UTF-8'
+# locales_default: 'C'
+...
