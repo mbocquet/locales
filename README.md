@@ -16,7 +16,7 @@ None.
 
 ## Install this role as submodule in a git repository
 
-`git submodule add https://github.com/mbocquet/locales.git roles/locales`
+`git submodule add https://git.sekoya.org/mb/locales.git roles/locales`
 
 ## Example Playbook
 
