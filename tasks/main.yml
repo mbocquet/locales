@@ -4,6 +4,13 @@
 # https://stackoverflow.com/questions/52421542/ansible-debconf-module-not-working-properly-to-set-default-locale
 # So for now we use locale_gen module to generate locales and a template to replace the default locale in /etc/default/locale
 
+- name: package
+  package:
+    name: locales
+  tags:
+    - locales
+    - package
+
 - name: generate
   locale_gen:
     name: '{{ item }}'
