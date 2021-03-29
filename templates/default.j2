@@ -1,2 +1,14 @@
-# {{ ansible_managed }}. role: locales, file: default.j2
+# {{ ansible_managed }}. role: {{ role_name }}, template: default.j2
 LANG={{ locales_default }}
+{% if locales_language is defined %}LANGUAGE={{ locales_language }}
+{% endif %}
+{% if locales_lc_numeric is defined %}LC_NUMERIC={{ locales_lc_numeric }}
+{% endif %}
+{% if locales_lc_time is defined %}LC_TIME={{ locales_lc_time }}
+{% endif %}
+{% if locales_lc_monetary is defined %}LC_MONETARY={{ locales_lc_monetary }}
+{% endif %}
+{% if locales_lc_paper is defined %}LC_PAPER={{ locales_lc_paper }}
+{% endif %}
+{% if locales_lc_measurement is defined %}LC_MEASUREMENT={{ locales_lc_measurement }}
+{% endif %}
