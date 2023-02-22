@@ -14,7 +14,7 @@
     - package
 
 - name: generate
-  locale_gen:
+  community.general.locale_gen:
     name: "{{ item }}"
     state: present
   loop: "{{ locales_to_be_generated }}"
