@@ -6,14 +6,14 @@
 # So for now we use locale_gen module to generate locales and a template to
 # replace the default locale in /etc/default/locale
 
-- name: package
-  package:
+- name: Package
+  ansible.builtin.package:
     name: locales
   tags:
     - locales
     - package
 
-- name: generate
+- name: Generate
   community.general.locale_gen:
     name: "{{ item }}"
     state: present
@@ -23,8 +23,8 @@
     - locales
     - gen
 
-- name: default
-  template:
+- name: /etc/default/locale
+  ansible.builtin.template:
     src: default.j2
     dest: /etc/default/locale
     mode: 0644
