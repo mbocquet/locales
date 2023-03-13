@@ -27,7 +27,18 @@ or
 
     - hosts: servers
       roles:
-         - { role: locales, locales_default: 'en_US.UTF-8' }
+        - role: locales
+          locale_gen:
+            - en_US.UTF-8
+            - fr_FR.UTF-8
+          locale_default:
+            LANG: en_US.UTF-8
+            LANGUAGE: en_US:en
+            LC_MEASUREMENT: fr_FR.UTF-8
+            LC_MONETARY: fr_FR.UTF-8
+            LC_NUMERIC: fr_FR.UTF-8
+            LC_PAPER: fr_FR.UTF-8
+            LC_TIME: fr_FR.UTF-8
 
 ## License
 

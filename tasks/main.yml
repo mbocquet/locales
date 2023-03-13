@@ -17,8 +17,8 @@
   community.general.locale_gen:
     name: "{{ item }}"
     state: present
-  loop: "{{ locales_to_be_generated }}"
-  when: locales_to_be_generated is defined
+  loop: "{{ locale_gen }}"
+  when: locale_gen is defined
   tags:
     - locales
     - gen
@@ -28,7 +28,7 @@
     src: default.j2
     dest: /etc/default/locale
     mode: 0644
-  when: locales_default is defined
+  when: locale_default is defined
   tags:
     - locales
     - default

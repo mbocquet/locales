@@ -4,11 +4,17 @@
 # Below are examples. vars should go in group or host vars inventory
 # files.
 
-# locales_to_be_generated. Sets the locales to generate.
-# locales_to_be_generated:
-#   - 'en_US.UTF-8'
-#   - 'fr_FR.UTF-8'
+# locale_gen. Sets the locales to generate.
+# locale_gen:
+#   - en_US.UTF-8
+#   - fr_FR.UTF-8
 
-# locales_default. Sets the default locale to use
-# locales_default: 'en_US.UTF-8'
-# locales_default: 'C'
+# locale_default. Sets variables in /etc/default/locale
+# locale_default:
+#   LANG: en_US.UTF-8
+#   LANGUAGE: en_US:en
+#   LC_MEASUREMENT: fr_FR.UTF-8
+#   LC_MONETARY: fr_FR.UTF-8
+#   LC_NUMERIC: fr_FR.UTF-8
+#   LC_PAPER: fr_FR.UTF-8
+#   LC_TIME: fr_FR.UTF-8

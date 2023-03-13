@@ -1,14 +1,4 @@
 # {{ ansible_managed }}. role: {{ role_name }}, template: default.j2
-LANG={{ locales_default }}
-{% if locales_language is defined and locales_language != '' %}LANGUAGE={{ locales_language }}
-{% endif %}
-{% if locales_lc_numeric is defined and locales_lc_numeric != '' %}LC_NUMERIC={{ locales_lc_numeric }}
-{% endif %}
-{% if locales_lc_time is defined and locales_lc_time != '' %}LC_TIME={{ locales_lc_time }}
-{% endif %}
-{% if locales_lc_monetary is defined and locales_lc_monetary != '' %}LC_MONETARY={{ locales_lc_monetary }}
-{% endif %}
-{% if locales_lc_paper is defined and locales_lc_paper != '' %}LC_PAPER={{ locales_lc_paper }}
-{% endif %}
-{% if locales_lc_measurement is defined and locales_lc_measurement != '' %}LC_MEASUREMENT={{ locales_lc_measurement }}
-{% endif %}
+{% for item in locale_default | dictsort %}
+{{ item.0 }}={{ item.1 }}
+{% endfor %}
