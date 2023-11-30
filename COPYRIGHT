@@ -1,6 +1,6 @@
 'locales'. Ansible role to configure locales.
 
-Copyright © 2019-2021 Mathias Bocquet (mbocquet@sekoya.org)
+Copyright © 2019-2023 Mathias Bocquet (mbocquet@sekoya.org)
 
 This file is part of 'locales' Ansible role.
 
