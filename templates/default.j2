@@ -1,4 +1,4 @@
 # {{ ansible_managed }}. role: {{ role_name }}, template: default.j2
 {% for item in locale_default | dictsort %}
-{{ item.0 }}={{ item.1 }}
+{{ item.0 }}="{{ item.1 }}"
 {% endfor %}
