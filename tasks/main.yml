@@ -27,7 +27,7 @@
   ansible.builtin.template:
     src: default.j2
     dest: /etc/default/locale
-    mode: 0644
+    mode: "0644"
   when: locale_default is defined
   tags:
     - locales
