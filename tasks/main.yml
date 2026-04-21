@@ -31,8 +31,8 @@
     mode: "0644"
   when:
     - locale_default is defined
-    - not ansible_distribution_major_version is string
-    - ansible_distribution_major_version is version('13', '<')
+    - not ansible_facts["distribution_major_version"] is string
+    - ansible_facts["distribution_major_version"] is version('13', '<')
   tags:
     - locales
     - default
@@ -44,7 +44,7 @@
     mode: "0644"
   when:
     - locale_default is defined
-    - ansible_distribution_major_version is string or ansible_distribution_major_version is version('13', '>=')
+    - ansible_facts["distribution_major_version"] is string or ansible_facts["distribution_major_version"] is version('13', '>=')
   tags:
     - locales
     - default
